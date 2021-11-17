@@ -1,4 +1,4 @@
-![portfolio-symfony](https://user-images.githubusercontent.com/79690181/142197771-9210755a-fbae-4dfc-9495-b04d6a90245f.png)
+![portfolio-symfony](https://user-images.githubusercontent.com/79690181/142198096-63eb1ad7-e4d6-4dcc-ae10-010579d7216b.png)
 
 # Portfolio avec Symfony
 
