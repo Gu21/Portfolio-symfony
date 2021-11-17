@@ -41,17 +41,6 @@ body {
   font-size: 1.5em;
 }
 
-// .text-justify {
-//   text-align: center!important;
-//   width: 70%;
-//   font-family: "Raleway", "Arial", sans-serif;
-//   font-weight: 300;
-//   color: #fff;
-//   font-size: 1em;
-//   // display: block;
-//   // margin: 0 auto;
-//   // text-align: center;
-// }
 
 .presentationImage {
   border-radius: 8%;
@@ -115,9 +104,6 @@ body {
   color: #ff7f00 !important;
 }
 
-// .Download:hover{
-// color: #ff7f00!important;
-// }
 
 h1,
 h2,
@@ -132,19 +118,6 @@ h4 {
 // ------------------media query--------------------
 
 
-// @media screen and (max-width: 1024px) {
-
-//   .text-justify {
-//     width:95%;
-//   }
-
-// }
-
-// @media screen and (max-width: 920px) {
-//   .text-justify {
-//     width: 100%;
-//   }
-// }
 
 @media screen and (max-width: 768px) {
   entationImage {
@@ -152,20 +125,8 @@ h4 {
     width: 214px;
    
 }
-//   .text-justify {
-//    display: block;
-//    margin: 0 auto;
-// }
 
-// .row .boxParallax {
-  
-//   display: flex;
-//   -ms-flex-wrap: nowrap;
-//    flex-wrap: nowrap; 
-//   margin-right: -15px;
-//   margin-left: -15px;
-// }
-}
+
 
 .paragraphSkillsSubtitle {
  
@@ -203,3 +164,4 @@ h4 {
 
 }
 
+}
