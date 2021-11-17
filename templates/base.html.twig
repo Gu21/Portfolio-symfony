@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Bienvenu sur mon portfolio! je suis Guillaume BISSON, développeur web et web mobile junior sur Allaire dans le Morbihan.
+	Je souhaite intégrer une équipe de développeurs web et web mobile et serais donc ravi de mettre mon savoir-faire en pratique et rejoindre votre équipe en tant que développeur web.." />
+	<meta name="google-site-verification" content="Efc4mlF1SCHg9y5wSpvzFl7GlDzcbZqOUDwTPFGCCts" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>
+		{% block title %}
+		{% endblock %}
+	</title>
+
+			<!-- -----LINK  FAVICON-------------- -->
+	<link rel="shortcut icon" href="/img/favicon.ico" type="images/x-icon" />																										        
+
+	<!-- {# -----------------------------------------BOOTSTRAP-------------------------------------------------------------- #} -->
+
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<!-- {# -----------------------------------------FONT--------------------------------------------------------------- #} -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+		rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+	<!-- {# --------------------------------------END---FONT--------------------------------------------------------------- #} -->
+
+	<!-- {# --------------------------------------CSS-------------------------------------------------------------- #} -->
+	<link rel="stylesheet" href="{{asset('css/base.css')}}">
+	<link rel="stylesheet" href="{{asset('css/presentation.css')}}">
+	<link rel="stylesheet" href="{{asset('css/competence.css')}}">
+	<link rel="stylesheet" href="{{asset('css/homeTechnologie.css')}}">
+	<link rel="stylesheet" href="{{asset('css/technologie.css')}}">
+	<link rel="stylesheet" href="{{asset('css/portfolio.css')}}">
+	<link rel="stylesheet" href="{{asset('css/creation.css')}}">
+	<link rel="stylesheet" href="{{asset('css/createNew.css')}}">
+	<link rel="stylesheet" href="{{asset('css/parcours.css')}}">
+	<link rel="stylesheet" href="{{asset('css/timeline.css')}}">
+	<link rel="stylesheet" href="{{asset('css/contact.css')}}">
+	<!-- {# ----------------------------------END----CSS-------------------------------------------------------------- #} -->
+	{% block javascripts %}
+	<!-- {# --------------------------------------script bootstrap-------------------------------------------------------------- #} -->
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+		integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<!-- {# ---------------------------END-----------script bootstrap-------------------------------------------------------------- #} -->
+	<!-- {# ----------------------------------FAVICON------------------------------------------------------------- #} -->
+	<script src="https://kit.fontawesome.com/4d2daebcf2.js" crossorigin="anonymous"></script>
+	<!-- {# ---------------------------END-------FAVICON------------------------------------------------------------- #} -->
+	<!-- {# -------------------------------------JS-------------------------------------------------------------- #} -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<script>
+		document.getElementsByTagName("html")[0].className += " js";
+	</script>
+
+
+	<!-- {# ---------------------------END----------JS-------------------------------------------------------------- #} -->
+
+
+
+
+	{% endblock %}
+
+</head>
+
+<body>
+
+	<!-- {# ------------------------EMAIL & TELEPHONE---------------------------------------- #} -->
+
+	<div class="container-fluid contact">
+
+		<div class="telephoneMail w-50" id="Accueil">
+
+			<!-- <i class="fas fa-phone-alt">(+33) 06.71.61.08.92</i> -->
+			<i class="fas fa-phone-alt"><a id="mail" href="tel:+330671610892">+33(0)671610892</a></i>
+			<i class="far fa-envelope">
+				<a id="mail" href="mailto:bisson_guillaume@yahoo.fr">bisson_guillaume@yahoo.fr</a>
+			</i>
+		</div>
+		<div></div>
+		<div class="social w-25">
+			<a  href="https://www.linkedin.com/in/guillaume-bisson-323067212/"><i class="fab fa-linkedin"></i></a>
+			<a href="https://github.com/Gu21"><i class="fab fa-github"></i></a>
+		</div>
+
+	</div>
+
+	<!-- {# ----------------END--------EMAIL & TELEPHONE---------------------------------------- #} -->
+
+	<!-- {# ----------------NAV---------------------------------------- #} -->
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top scrolled" id="navigation">
+		<div class="container-fluid name">
+			<a class="navbar-brand ml-5" href="{{path ('home')}}">
+				<span class="name">BISSON</span>Guillaume
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mr-5">
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="{{path ('home')}}">ACCUEIL</a>
+					</li>
+					<li class=" nav-item">
+							<a class="nav-link" href="#presentation">À PROPOS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#competences">COMPÉTENCES</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#portfolio">PORTFOLIO</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#parcours">PARCOURS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact" tabindex="-1" aria-disabled="true">CONTACT</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- 
+	{# --------------END--NAV---------------------------------------- #} -->
+	{% block body %}{% endblock %}
+	<footer id="footerCv" class="footerCv">
+		<div class="container mt-5">
+			<div class="row">
+				<div class=" col-md-12 socialFooter">
+					<a href="https://www.linkedin.com/in/guillaume-bisson-323067212/"><i class="fab fa-linkedin-in"></i></a>
+					<a href="https://github.com/Gu21"><i class="fab fa-github"></i></a>
+					<a href="#Accueil"><i class="fas fa-chevron-up"></i>
+				</div>
+			</div>
+			<div class="row">
+				<div class=" col-md-12 copyright text-center mt-2">
+					<p>© Bisson Guillaume, Tous droits réservés.</p>
+				</div>
+
+
+
+	</footer>
+	<!-- {# -----------END ---FOOTER--------------------------------------- #} -->
+	<script>
+		$(document).ready(function () {
+			$(document).scroll(function () {
+				let $nav = $(".fixed-top");
+				$nav.toggleClass('scrolled', $(document).scrollTop() > $nav.height());
+
+			});
+		});
+	</script>
+	<script>
+		$(function () {
+			/**
+			 * Smooth scrolling 
+			 **/
+			$("a[href*='#']:not([href='#'])").click(function () {
+				if (
+					location.hostname == this.hostname &&
+					this.pathname.replace(/^\//, "") == location.pathname.replace(/^\//, "")
+				) {
+					var anchor = $(this.hash);
+					anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) + "]");
+					if (anchor.length) {
+						$("html, body").animate({
+							scrollTop: anchor.offset().top
+						}, 1500);
+					}
+				}
+			});
+		});
+	</script>
+	<script src="{{asset('js/timeline.js')}}"></script>
+
+	<script>
+
+// -----------CACHER L'ANCRE DANS L'URL------------
+
+$(function(){
+    $('a[href^="#"]').on('click', function(event) {
+        var $target = $($(this).attr('href'));
+ 
+        $('html, body').animate({
+            scrolltop: $target.offset().top
+        }, 400);
+ 
+        event.preventDefault();
+    });
+});
+</script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Creations index{% endblock %}
+
+{% block body %}
+    <h1 class="titleCreation ">Creations index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>TitreCreation</th>
+                <th>ImageCreation</th>
+                <th>LienCreation</th>
+                <th>DescriptifCreation</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for creation in creations %}
+            <tr>
+                <td>{{ creation.id }}</td>
+                <td>{{ creation.titreCreation }}</td>
+                <td><img src="{{ asset('uploads/photos/' ~ creation.imageCreation) }}" width="100"></td>
+                <td>{{ creation.lienCreation }}</td>
+                <td>{{ creation.descriptifCreation|raw}}</td>
+                <td>
+                    <a href="{{ path('creations_show', {'id': creation.id}) }}">show</a>
+                    <a href="{{ path('creations_edit', {'id': creation.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('creations_new') }}">Create new</a>
+{% endblock %}

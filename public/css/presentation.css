@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.presentation,
+.sectionTechnologie,
+.sectionPortfolio {
+  background-color: #000;
+}
+
+.titlePresentation,
+.titleContactCv {
+  text-align: center;
+  margin-bottom: 45px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  color: #ff7f00;
+}
+
+.text-justify {
+  color: #fff;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.subtitlePresentation {
+  text-align: center;
+  color: #fff;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.presentationImage {
+  border-radius: 8%;
+  width: 200px;
+}
+
+.titlePresentation::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ff7f00;
+  width: 12%;
+  transition: 2s;
+}
+
+.titlePresentation:hover::after {
+  width: 30%;
+  border: 1px solid #fff;
+}
+
+.parallaxCv {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/img/parallax1.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 33vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttonCv {
+  display: inline-block;
+  font-size: 1.3em;
+  letter-spacing: 2.5px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  transition: 1.5s;
+}
+
+.buttonCv:hover {
+  background: linear-gradient(-30deg, #000 50%, #fff 50%);
+  display: inline-block;
+  font-size: 23px;
+  letter-spacing: 2.5px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.Download {
+  color: #ff7f00 !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #ff7f00 !important;
+  color: var(--color-contrast-higher, #1c1c21);
+  line-height: 1.2;
+  line-height: var(--heading-line-height, 1.2);
+}
+
+@media screen and (max-width: 768px) {
+  entationImage {
+    border-radius: 16px;
+    width: 214px;
+  }
+}
+.paragraphSkillsSubtitle {
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 500px) {
+  .paragraphSkillsSubtitle .titlePresentation, .paragraphSkillsSubtitle .titleContactCv {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .paragraphSkillsSubtitle .presentation {
+    padding-right: 0px;
+  }
+  .paragraphSkillsSubtitle .textPresentation {
+    text-align: center;
+  }
+}/*# sourceMappingURL=presentation.css.map */

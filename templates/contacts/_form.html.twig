@@ -1,0 +1,12 @@
+
+   {{ form_start(form) }}
+    {{ form_widget(form.nomContact,{'attr':{'placeholder':'Nom','class':'nameContact'}}) }}
+    {{ form_errors(form) }}
+    {{ form_widget(form.prenomContact,{'attr':{'placeholder':'Prenom','class':'prenomContact'}}) }}
+    {{ form_widget(form.entrepriseContact,{'attr':{'placeholder':'Entreprise','class':'entrepriseContact'}}) }}
+    {{ form_widget(form.messageContact ,{'attr':{'placeholder':'Message','class':'messageContact ','textarea':'height:300px'}}) }}
+    <div class="buttonContact">
+        <button class="btn">{{ button_label|default("ENVOYER") }}</button>
+    </div>
+    {{ form_end(form) }}
+

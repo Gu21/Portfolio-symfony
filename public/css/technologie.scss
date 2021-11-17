@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  .table {
+    margin-top: 50%;
+}
+.sectionTechnologie{
+  height: 50vh;
+
+}
+.iconsTechnology{
+
+  text-align: center;
+}
+
+// ------MEDIA QUERY------
+
+
+@media screen and (max-width: 768px){
+
+  .text-justify {
+    display: block;
+    margin: 0 auto;
+}
+
+// .presentationImage {
+
+//   margin-top: 50px;
+// }
+
+}
+
+@media screen and (max-width: 500px){
+
+  .titleTechnologie {
+  
+    font-size: 2em;
+    
+  }
+
+}
+
+@media screen and (max-width: 320px){
+
+  .sectionTechnologie {
+    // height: 60vh!important;
+    height: 82vh !important;
+}
+
+
+}

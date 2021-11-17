@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.titleCreate {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.table {
+  margin-top: 6%;
+}
+
+.sectionTechnologie {
+  height: 50vh;
+}/*# sourceMappingURL=parcoursNew.css.map */

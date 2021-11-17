@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %} {% block title %}New Technologies{% endblock %}
+{% block body %}
+
+<section class="sectionTechnologie d-flex flex-column justify-content-center">
+    <div class="container boxTechnologies">
+        <h1 class="titleTechnologie">Create new Technologies</h1>
+
+        {{ include("technologies/_form.html.twig") }}
+
+        <a href="{{ path('technologies_index') }}">back to list</a>
+    </div>
+</section>
+{% endblock %}

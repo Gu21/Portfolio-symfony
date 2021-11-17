@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.titlePortfolio {
+  text-align: center;
+  margin-bottom: 45px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: #ff7f00;
+}
+
+.titlePortfolio::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ff7f00;
+  width: 12%;
+  transition: 1.5s;
+}
+
+.titlePortfolio:hover::after {
+  width: 30%;
+  border: 1px solid #fff;
+}
+
+.subtitlePortfolio {
+  text-align: center;
+  color: #fff;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
+}
+
+.boxInfoImg {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.boxImg {
+  position: relative;
+  top: 50%;
+  left: 3%;
+  overflow: hidden;
+}
+
+.boxImg img {
+  width: 92%;
+  height: 100%;
+}
+
+.boxImg .infos-hover {
+  display: block;
+  position: absolute;
+  left: 14px;
+  bottom: 0;
+  width: 85.1%;
+  height: 59px;
+  color: #fff;
+  text-align: center;
+  background: rgba(252, 252, 252, 0.8);
+  transition: all 0.5s;
+}
+
+.boxImg .infos-hover > i {
+  font-size: 50px;
+  color: #ff7f00 !important;
+}
+
+.boxImg:hover .infos-hover {
+  height: 100%;
+}
+
+.linkRun {
+  display: block;
+  margin-top: 10px;
+  color: #fff !important;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.tiltleCard {
+  text-align: center;
+  color: #000 !important;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.paragraphCards {
+  text-align: center;
+  color: #000;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
+}
+
+.tiltleCard::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #000;
+  width: 50%;
+  transition: 2s;
+  margin-top: 7px;
+}
+
+.tiltleCard:hover::after {
+  border: 1px solid #000;
+  width: 35%;
+}
+
+.italics {
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 1024px) {
+  .boxImg img {
+    width: 90%;
+    height: 100%;
+  }
+
+  .boxImg .infos-hover {
+    width: 81.9% !important;
+  }
+}
+.paragraphCards {
+  font-size: 0.7em;
+  line-height: 1.4;
+  text-align: justify;
+  padding: 3px;
+}
+
+.boxImg .infos-hover > i {
+  font-size: 28px;
+}
+
+@media screen and (max-width: 988px) {
+  .boxImg img {
+    width: 89%;
+    height: 100%;
+  }
+
+  .boxImg .infos-hover {
+    width: 78.2% !important;
+  }
+}
+@media screen and (max-width: 988px) and (max-width: 768px) {
+  .paragraphCards {
+    font-size: 0.62em;
+  }
+
+  .tiltleCard {
+    font-size: 1rem;
+  }
+
+  .linkRun {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 988px) and (max-width: 750px) {
+  .boxImg img {
+    width: 103%;
+    height: 100%;
+  }
+
+  .boxImg .infos-hover {
+    width: 92.9% !important;
+  }
+}
+@media screen and (max-width: 988px) and (max-width: 425px) {
+  .paragraphCards {
+    font-size: 0.9em;
+    text-align: justify;
+    padding: 5px;
+    line-height: 1.6;
+  }
+}
+@media screen and (max-width: 988px) {
+  .tiltleCard {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 988px) {
+  .boxImg .infos-hover > i {
+    font-size: 30px;
+  }
+}
+.boxImg .infos-hover {
+  width: 85%;
+}
+
+@media screen and (max-width: 425px) {
+  .boxImg .infos-hover {
+    width: 92.6% !important;
+  }
+
+  iframe {
+    width: 300px;
+    height: 300px;
+  }
+
+  .titlePortfolio {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 375px) {
+  .boxImg .infos-hover {
+    width: 91.5% !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  .boxImg .infos-hover {
+    width: 89.4% !important;
+  }
+
+  .tiltleCard {
+    font-size: 1rem;
+  }
+
+  .paragraphCards {
+    font-size: 0.75em;
+    padding: 5px;
+    text-align: justify;
+    line-height: 1.4;
+  }
+}/*# sourceMappingURL=portfolio.css.map */

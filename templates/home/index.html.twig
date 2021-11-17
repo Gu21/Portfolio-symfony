@@ -1,0 +1,403 @@
+{% extends 'base.html.twig' %}
+{% block title %}Guillaume BISSON | Portfolio Développeur Web{%
+endblock%}
+{% block body %}
+
+<!-- {# -------------------------------------CAROUSEL----------------------------- #} -->
+<section>
+  <div class="container-fluid carousel">
+    <div id=" carouselExampleFade  " class="myCarousel carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/img/carousel1.jpeg" class="d-block-img" alt="image-ordinateur" />
+          <div class="carousel-caption">
+            <h1 class="ml2">
+              <span class="tileCarousel">DEVELOPPEUR</span>
+              &nbsp WEB &nbsp
+              JUNIOR
+            </h1>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/img/Carousel3.jpeg" class="d-block-img" alt="image-ordinateur" />
+          <div class="carousel-caption">
+            <h2 class="ml2">
+              <span class="tileCarousel">DEVELOPPEUR</span>
+              &nbsp WEB &nbsp
+              JUNIOR
+            </h2>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/img/Carousel4.jpeg" class="d-block-img" alt="image-ordinateur" />
+          <div class="carousel-caption">
+            <h2 class="ml2">
+              <span class="tileCarousel">DEVELOPPEUR</span>
+              &nbsp WEB &nbsp
+              JUNIOR
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+																        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+																        <span class="visually-hidden"></span>
+																      </button> -->
+      <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+																        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+																        <span class="visually-hidden"></span>
+																      </button> -->
+    </div>
+  </div>
+</section>
+
+<!-- {# ------------------------END-------------CAROUSEL----------------------------- #} -->
+
+<!-- {# ------------------------PRESENTATION---------------------------- #} -->
+<section class="presentation pt-5" id="presentation">
+  <div class="container py-5">
+    {% for presentation in Presentations %}
+
+    <h2 class="titlePresentation">{{ presentation.titrePresentation }}</h2>
+    <h3 class="subtitlePresentation mb-4 py-5">
+      {{ presentation.sousTitrePresentation }}
+    </h3>
+
+    <div class="row boxPresentation">
+      {# <div class="col-md-3"></div> #}
+      <div class="col-sm-6 mb-5 textPresentation">
+        <p class="text-justify">{{ presentation.descriptifPresentation }}</p>
+      </div>
+      <div class="col-sm-6 text-center">
+        <img class="presentationImage" src="{{ asset('uploads/photos/' ~ presentation.photoPresentation) }}"
+          alt="image-identité" loading="lazy" width="100" />
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- {# ---------------END---------PRESENTATION---------------------------- #} -->
+<!-- {# -------------PARALLAX--------------------------- #} -->
+
+<section class="parallaxCv">
+  <div class="container">
+    <div class="row boxParallax">
+      <div class="col-md-4"></div>
+      <div class=" col-md-4 text-center buttonCv">
+        <a class="Download" href="documents/CV_BISSON_Guillaume.pdf">TELECHARGER MON CV</a>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+</section>
+
+<!-- {# ----------END---PARALLAX--------------------------- #} -->
+
+<!-- {# --------LES TECHNOLOGIES------------------------- #} -->
+
+<section class="sectionTechnologie d-flex flex-column  justify-content-center">
+  <div class="container">
+    <h2 class="titleTechnologie">LES TECHNOLOGIES</h2>
+    <div class="row">
+      <div class="iconsTechnology  col-md-12  flex-row justify-content-center">
+        {% for technology in technologies %}
+        <img class="imgTechnologie text-center" src="{{ asset('uploads/photos/' ~ technology.imageTechnologie) }}"
+          alt="image-technologie" loading="lazy" width="100" />
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!-- {# -----END---LES TECHNOLOGIES------------------------- #} -->
+
+<!-- {# -----COMPETENCES------------------------ #} -->
+<section class="skills mt-5 pt-5" id="competences">
+
+  <div class="container mt-5 pt-5">
+    <div class="titleSkills ">
+      <h4 class="titleSkillsCompetences ml-3">COMPETENCES</h4>
+      <P class="paragraphSkillsSubtitle">Développeur full-stack, front-end et back-end</P>
+    </div>
+    <div class="col-md-12 text-center mb-4 mt-5">
+      <img src="img/competences.webp" alt="image-compétences" loading="lazy">
+    </div>
+
+    <div class="row">
+      <div class="titleSkills col-md-4 mt-5 ">
+        <div class="boxSkills ml-5">
+          <div class="iconSkills d-flex align-items-baseline">
+            <i class="fas fa-code"></i>
+            <h4 class="titleBox ml-3">FRONT-END</h4>
+          </div>
+          <div class="contentSkills">
+            <p class="paragraphSkills">Création et intégration de sites web et applications mobiles responsive,
+              accessibles et répondant aux
+              normes
+              W3C, avec Bootstrap, CSS/SASS et Javascrypt/JQuery.</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="titleSkills col-md-4 mt-5">
+        <div class="boxSkills ml-5">
+          <div class="iconSkills d-flex align-items-baseline">
+            <i class="fas fa-database"></i>
+            <h4 class="titleBox ml-3">BACK-END</h4>
+          </div>
+          <div class="contentSkills">
+            <p class="paragraphSkills">Développement de sites web via php/symfony, création et gestion de bases de
+              données avec MySQL.
+              Programmation orientée objet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="titleSkills col-md-4 mt-5 d-flex flex-column justify-content-center align-items-center"></div>
+      <div class="titleSkills col-md-4 mt-5 ">
+        <div class="boxSkills ml-5">
+          <div class="iconSkills d-flex align-items-baseline">
+            <i class="fas fa-project-diagram"></i>
+            <h4 class="titleBox ml-3">GESTION DE PROJET</h4>
+          </div>
+          <div class="contentSkills">
+            <p class="paragraphSkills">Réalisation d'UML / MCD / MLD. Apprentissage pour la rédaction d'un cahier des
+              charges, connaissance de la méthode Agile: SCRUM.
+            </p>
+          </div>
+
+        </div>
+      </div>
+      <div class="titleSkills col-md-4 mt-5">
+        <div class="boxSkills ml-5">
+          <div class="iconSkills d-flex align-items-baseline">
+            <i class="fas fa-laptop"></i>
+            <h4 class="titleBox ml-3">WEBDESIGN</h4>
+          </div>
+          <div class="contentSkills">
+            <p class="paragraphSkills mb-5">Création de maquette XD et HTML, ainsi que de prototypes fonctionnels.
+              Conception
+              centrée utilisateurs selon les règles d'UX lors de la création d'une interface utilisateur
+              .</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- {# -----PORTFOLIO------------------------ #} -->
+
+<section class="sectionPortfolio">
+  <div class="container py-5" id="portfolio">
+    <div>
+      <h2 class="titlePortfolio mt-5">PORTFOLIO</h2>
+      <h3 class="subtitlePortfolio">Voici quelques-unes de mes réalisations</h3>
+    </div>
+
+    <div class=" boxInfoImg">
+      <div class="row row-cols-auto">
+        {% for creation in creations %}
+        <div class=" col-sm-4 boxImg mt-5">
+          <img src="{{ asset('uploads/photos/' ~ creation.imageCreation) }}" alt="image-creation" loading="lazy"
+            width="300">
+          <div class="infos-hover">
+            <i class="fa fa-eye"></i>
+            <h4 class="tiltleCard">
+              {{ creation.titreCreation }}</h4>
+            <a href="{{ creation.lienCreation }}" target="bank" class="linkRun">
+              <P class="paragraphCards">
+                <i class="italics">{{ creation.descriptifCreation|raw }}</i>
+              </P>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- {# ----END------PORTFOLIO------------------------ #} -->
+
+<!-- {# ----PARCOURS------------------------ #} -->
+
+
+<section class="cd-timeline js-cd-timeline " id="parcours">
+
+  <div class="container boxParcours py-5">
+    <div>
+      <h2 class="titlelimetimeCv mt-5">PARCOURS</h2>
+
+    </div>
+
+    {% for parcour in parcours %}
+    {% if parcour.ordre is divisible by(2) == 0 %}
+    <div class="container max-width-lg cd-timeline__container cvContainerTimeline">
+      
+      <div class="cd-timeline__block">
+        <div class="cd-timeline__img cd-timeline__img--picture">
+          <!-- <img src="assets/img/cd-icon-picture.svg" alt="Picture"> -->
+        </div>
+        <!-- cd-timeline__img -->
+        <div class="cd-timeline__content text-component">
+          <h2 class="titreParcours">{{ parcour.titreParcours }}</h2>
+          <h3 class="subtitleParcours">{{ parcour.sousTitreParcours }}</h3>
+          <span>{{ parcour.dateDebutParcours ? parcour.dateDebutParcours|date('Y') : '' }}&nbsp &#45;&nbsp
+            {{ parcour.dateFinParcours ? parcour.dateFinParcours|date('Y') : '' }}</span>
+          <p class="color-contrast-medium">{{ parcour.descriptifParcours|raw }}</p>
+        </div>
+      </div>
+      {% else %}
+      <div class="cd-timeline__block">
+
+        <div class="cd-timeline__img cd-timeline__img--movie">
+          <!-- <img src="assets/img/cd-icon-movie.svg" alt="Movie"> -->
+        </div>
+        <!-- cd-timeline__img -->
+       
+        <div class="cd-timeline__content text-component">
+          <h2 class="titreParcours">{{ parcour.titreParcours }}</h2>
+          <h3 class="subtitleParcours">{{ parcour.sousTitreParcours }}</h3>
+          <span>{{ parcour.dateDebutParcours ? parcour.dateDebutParcours|date('Y') : '' }}&nbsp &#45;&nbsp
+            {{ parcour.dateFinParcours ? parcour.dateFinParcours|date('Y') : '' }}</span>
+          <p class="color-contrast-medium"></p>
+          {{ parcour.descriptifParcours|raw }}</p>
+        </div>
+
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+</section>
+<!-- cd-timeline -->
+
+<!-- {# ---END----PARCOURS------------------------ #} -->
+
+
+<!-- {# ----CONTACT------------------------ #} -->
+
+<section class="contactCV py-5" id="contact">
+  <div class="container  py-5">
+
+    <div class="titleBoxContactCV ">
+      <h4 class="titleContactCv ml-3">CONTACT</h4>
+    </div>
+    <div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-md-6 offset-md-5 telContact">
+          <i id="tel" class="fas fa-phone-alt">
+            <a id="mail" href="tel:+330671610892">+33(0)671610892</a>
+          </i>
+          <i id="envelope" class="far fa-envelope">
+            <a id="mail" href="mailto:bisson_guillaume@yahoo.fr">bisson_guillaume@yahoo.fr</a>
+          </i>
+
+        </div>
+
+      </div>
+      <div class="row boxFormContact">
+        <div class="col-md-6 py-5 ">
+          <h4 class="titleContactHome mb-3">Contactez moi!</h4>
+          <p class="paraphContact">Je suis mobile sur Nantes, Rennes,Saint-Nazaire, Vannes
+            <!-- et
+            disponible<br><span class="endFormation">
+              à partir du 28 septembre 2021.</span> -->
+          </p>
+        </div>
+        <div class="col-md-6">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43019.87034981536!2d-2.2166097717212545!3d47.631148221578684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480f908272896aef%3A0x40ca5cd36e2ca00!2s56350%20Allaire!5e0!3m2!1sfr!2sfr!4v1622204179895!5m2!1sfr!2sfr"
+            width="450" height="450" style="border:0;" loading="lazy"></iframe>
+
+        </div>
+        {# <div class="col"></div> #}
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- {# --------script javascript----------------------- #} -->
+<script>
+  // Wrap every letter in a span
+  var textWrapper = document.querySelector(".ml2");
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+  anime.timeline({
+    loop: true
+  }).add({
+    targets: ".ml2 .letter",
+    scale: [
+      4, 1
+    ],
+    opacity: [
+      0, 1
+    ],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    // duration: 950,
+    delay: (el, i) => 70 * i
+  }).add({
+    targets: ".ml2",
+    opacity: 0,
+    duration: 3000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+<script>
+  // jQuery(document).ready(function ($) {
+  //   var $timeline_block = $('.cd-timeline-block');
+  //   // hide timeline blocks which are outside the viewport
+  //   $timeline_block.each(function () {
+  //     if ($(this).offset().top > $(window).scrollTop() + $(window).height() * 0.75) {
+  //       $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+  //     }
+  //   });
+  //   // on scolling, show/animate timeline blocks when enter the viewport
+  //   $(window).on('scroll', function () {
+  //     $timeline_block.each(function () {
+  //       if ($(this).offset().top <= $(window).scrollTop() + $(window).height() * 0.75 && $(this).find(
+  //           '.cd-timeline-img').hasClass('is-hidden')) {
+  //         $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass(
+  //           'bounce-in');
+  //       }
+  //     });
+  //   });
+  // });
+
+  function VerticalTimeline( element ) {
+   this.element = element;
+   this.blocks = this.element.getElementsByClassName("cd-timeline__block");
+   this.images = this.element.getElementsByClassName("cd-timeline__img");
+   this.contents = this.element.getElementsByClassName("cd-timeline__content");
+   // ..
+};
+
+VerticalTimeline.prototype.showBlocks = function() {
+   var self = this;
+   for( var i = 0; i < this.blocks.length; i++) {
+      (function(i){
+         if( self.contents[i].classList.contains("cd-timeline__content--hidden") && self.blocks[i].getBoundingClientRect().top <= window.innerHeight*self.offset ) {
+            // add bounce-in animation
+            self.images[i].classList.add("cd-timeline__img--bounce-in");
+            self.contents[i].classList.add("cd-timeline__content--bounce-in");
+            self.images[i].classList.remove("cd-timeline__img--hidden");
+            self.contents[i].classList.remove("cd-timeline__content--hidden");
+         }
+      })(i);
+   }
+};
+</script>{% endblock %}

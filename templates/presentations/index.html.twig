@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Presentations index{% endblock %}
+
+{% block body %}
+    <h1>Presentations index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>TitrePresentation</th>
+                <th>SousTitrePresentation</th>
+                <th>DescriptifPresentation</th>
+                <th>PhotoPresentation</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for presentation in presentations %}
+            <tr>
+                <td>{{ presentation.id }}</td>
+                <td>{{ presentation.titrePresentation }}</td>
+                <td>{{ presentation.sousTitrePresentation }}</td>
+                <td>{{ presentation.descriptifPresentation }}</td>
+                <td><img src="{{ asset('uploads/photos/' ~  presentation.photoPresentation) }}" width="100"></td>
+                <td>
+                    <a href="{{ path('presentations_show', {'id': presentation.id}) }}">show</a>
+                    <a href="{{ path('presentations_edit', {'id': presentation.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('presentations_new') }}">Create new</a>
+{% endblock %}

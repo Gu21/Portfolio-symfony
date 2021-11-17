@@ -1,0 +1,124 @@
+.cd-timeline__img--movie, .cd-timeline__img--picture {
+  background-color: #000 !important;
+}
+
+.cd-timeline {
+  overflow: hidden;
+  padding: 2em 0;
+  padding: var(--space-lg) 0;
+  color: #fff !important;
+  color: var(--cd-color-3);
+  background-color: #fff !important;
+  background-color: hsl(var(--cd-color-2-h), var(--cd-color-2-s), calc(var(--cd-color-2-l)*1.05));
+  font-family: "Droid Serif", serif;
+  font-family: var(--font-primary);
+}
+
+.cd-timeline__content {
+  flex-grow: 1;
+  position: relative;
+  margin-left: 1.25em;
+  margin-left: var(--space-md);
+  background: #000 !important;
+  background: var(--color-white);
+  border-radius: 0.25em;
+  border-radius: var(--radius-md);
+  padding: 1.25em;
+  padding: var(--space-md);
+  box-shadow: 0 3px 0 #d8e5ee;
+  box-shadow: 0 3px 0 var(--cd-color-2);
+}
+
+.cd-timeline__content::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+}
+
+.cd-timeline__block:nth-child(odd) .cd-timeline__content::before {
+  right: auto;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-left-color: #000 !important;
+}
+
+.titreParcours {
+  font-family: "Raleway", "Arial", sans-serif !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #ff7f00 !important;
+}
+
+.subtitleParcours {
+  color: #fff !important;
+}
+
+.cd-timeline__block {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2em;
+  margin-bottom: var(--space-lg);
+  color: #fff !important;
+  font-family: "Roboto", "Arial", sans-serif !important;
+  font-weight: 500;
+}
+
+.cd-timeline__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 4px;
+  background: #ff7f00 !important;
+  background: var(--cd-color-2);
+}
+
+.subtitleParcours + span {
+  color: #ff7f00 !important;
+}
+
+.titlelimetimeCv {
+  text-align: center;
+  margin-bottom: 15%;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  color: #ff7f00;
+}
+
+.titlelimetimeCv::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ff7f00;
+  width: 12%;
+  transition: 1.5s;
+}
+
+.titlelimetimeCv:hover::after {
+  width: 30%;
+  border: 1px solid #000;
+}
+
+@media screen and (max-width: 500px) {
+  .titlelimetimeCv {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .cd-timeline__container {
+    position: relative;
+    padding: 1.25em 0;
+    padding: var(--space-md) 0;
+  }
+}/*# sourceMappingURL=parcours.css.map */

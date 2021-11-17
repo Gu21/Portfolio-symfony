@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.presentation,
+.sectionTechnologie,
+.sectionPortfolio {
+  background-color: #000;
+}
+.titlePresentation,
+.titleContactCv {
+  text-align: center;
+  margin-bottom: 45px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  color: #ff7f00;
+}
+
+.text-justify{
+
+ 
+  color: #fff;
+   font-family: "Roboto", "Arial", sans-serif;
+   font-weight: 500;
+  font-size: 1em;
+
+}
+
+.subtitlePresentation {
+  text-align: center;
+  color: #fff;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+// .text-justify {
+//   text-align: center!important;
+//   width: 70%;
+//   font-family: "Raleway", "Arial", sans-serif;
+//   font-weight: 300;
+//   color: #fff;
+//   font-size: 1em;
+//   // display: block;
+//   // margin: 0 auto;
+//   // text-align: center;
+// }
+
+.presentationImage {
+  border-radius: 8%;
+  width: 200px;
+}
+
+.titlePresentation::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ff7f00;
+  width: 12%;
+  transition: 2s;
+}
+
+.titlePresentation:hover::after {
+  width: 30%;
+  border: 1px solid #fff;
+}
+
+.parallaxCv {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("/img/parallax1.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 33vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+.buttonCv {
+  display: inline-block;
+  font-size:  1.3em;
+  letter-spacing: 2.5px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 20px 50px rgb(0 0 0 / 50%);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  transition: 1.5s;
+}
+
+.buttonCv:hover {
+  background: linear-gradient(-30deg, #000 50%, #fff 50%);
+  display: inline-block;
+  font-size: 23px;
+  letter-spacing: 2.5px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 20px 50px rgb(0 0 0 / 50%);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+.Download {
+  color: #ff7f00 !important;
+}
+
+// .Download:hover{
+// color: #ff7f00!important;
+// }
+
+h1,
+h2,
+h3,
+h4 {
+  color: #ff7f00 !important;
+  color: var(--color-contrast-higher, #1c1c21);
+  line-height: 1.2;
+  line-height: var(--heading-line-height, 1.2);
+}
+
+// ------------------media query--------------------
+
+
+// @media screen and (max-width: 1024px) {
+
+//   .text-justify {
+//     width:95%;
+//   }
+
+// }
+
+// @media screen and (max-width: 920px) {
+//   .text-justify {
+//     width: 100%;
+//   }
+// }
+
+@media screen and (max-width: 768px) {
+  entationImage {
+    border-radius: 16px;
+    width: 214px;
+   
+}
+//   .text-justify {
+//    display: block;
+//    margin: 0 auto;
+// }
+
+// .row .boxParallax {
+  
+//   display: flex;
+//   -ms-flex-wrap: nowrap;
+//    flex-wrap: nowrap; 
+//   margin-right: -15px;
+//   margin-left: -15px;
+// }
+}
+
+.paragraphSkillsSubtitle {
+ 
+  font-size: 1.5rem;
+ 
+
+
+
+@media screen and (max-width: 500px){
+
+  .titlePresentation, .titleContactCv {
+    
+    font-size: 2rem;
+    
+}
+}
+
+@media screen and (max-width: 425px){
+
+
+
+   .presentation{
+   
+     padding-right: 0px; 
+   
+}
+
+
+.textPresentation{
+
+  text-align: center;
+
+   }
+}
+
+}
+
