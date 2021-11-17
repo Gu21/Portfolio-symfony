@@ -2,12 +2,12 @@
 
 # Portfolio avec Symfony
 
-Premier projet avec Symfony avec la création d'un portfolio.
+Premier projet avec Symfony, création d'un portfolio.
 
 * Utilisation de la méthode MERISE pour la conception de la base de données
 * Mise en place d'un projet PHP / Symfony
 * Création des entités et de leurs CRUD et migrate avec l'ORM Doctrine vers MySQL
-*  templates Twig
+* Templates Twig
 
 ## Environnement
 
@@ -21,4 +21,8 @@ Premier projet avec Symfony avec la création d'un portfolio.
 * Composer 2.0.13
 * Editeur de code Visual Studio code
 * Git / Github
+
+## Lien du site
+
+(https://trail-allaire-bisson.fr)
 
