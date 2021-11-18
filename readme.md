@@ -7,7 +7,7 @@ First project with Symfony, creation of a portfolio.
 * Use of the MERISE method for the design of the database
 * Setting up a PHP / Symfony project
 * Creation of entities and their CRUDs and migration with the Doctrine ORM to MySQL
-* Twig Templates
+* TWIG TEMPLATE
 
 ## Environment
 
